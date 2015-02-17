@@ -1,0 +1,19 @@
+jQuery.noConflict();
+(function($){
+window.onload=function(){
+    $("#other-topy-images").thumbnailScroller({
+     scrollerType:"clickButtons", 
+        scrollerOrientation:"horizontal", 
+        scrollSpeed:2, 
+        scrollEasing:"easeOutCirc", 
+        scrollEasingAmount:800, 
+        acceleration:4, 
+        scrollSpeed:800, 
+        noScrollCenterSpace:10, 
+        autoScrolling:0, 
+        autoScrollingSpeed:2000, 
+        autoScrollingEasing:"easeInOutQuad", 
+        autoScrollingDelay:500 
+    });
+}
+})(jQuery);
