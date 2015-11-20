@@ -1,0 +1,153 @@
+/*---------------------------------------------------------
+ * Frontpage Infobox
+---------------------------------------------------------*/
+.body__fp-infobox--full {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  @include media-query(805px) {
+    display: block;
+  }
+}
+.body__fp-infobox--mobile {
+  display: block;
+  margin-bottom: 3em;
+  @include media-query(805px) {
+    display: none;
+  }
+}
+.body__fp-infobox--full,
+.body__fp-infobox--mobile {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  text-align: center;
+  z-index: 10;
+  @include media-query(1110px) {
+    bottom: 15em;
+  }
+}
+.fp-infobox-row {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  @include media-query(1110px) {
+    width: 522px;
+  }
+  &:first-child {
+    margin-right: 0;
+    @include media-query(1110px) {
+      margin-right: 0.5em;
+    }
+  }
+  &:last-child {
+    margin-left: 0;
+    @include media-query(1110px) {
+      margin-left: 0.5em;
+    }
+  }
+}
+.fp-infobox-item {
+  width: 250px;
+  height: 190px;
+  background: url(images/backgrounds/tout.png) no-repeat 100% 0;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.5;
+  color: #4D4D4F;
+  min-height: 185px;
+  vertical-align: top;
+  display: block;
+  margin: 0 auto 1em;
+  padding: 1em;
+  position: relative;
+  @include media-query(590px) {
+    display: inline-block;
+    margin: 0 0 1em;
+  }
+  &:hover{
+    color:#fff;
+    background: url(images/backgrounds/tout.png) no-repeat 100% -1000px;
+  }
+  &:first-child {
+    float: none;
+    margin: 0 auto 1em;
+    @include media-query(590px) {
+      margin-right: 0.5em;
+    }
+    @include media-query(1110px) {
+      float: left;
+      margin-right: 0;
+    }
+  }
+  &:last-child {
+    float: none;
+    margin-left: 0.5em;
+    margin: 0 auto 1em;
+    @include media-query(590px) {
+      margin-left: 0.5em;
+    }
+    @include media-query(1110px) {
+      float: right;
+      margin-left: 0;
+    }
+  }
+  a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+}
+.infobox-item--heading {
+  @include font-size(22);
+  margin: 0 0 0.25em 0;
+  line-height: 1.3;
+}
+.heading--oral-hist {
+  position: relative;
+  min-height: 21px;
+}
+.fp-infobox-item--type {
+  position: absolute;
+  z-index: 2;
+  bottom: 54px;
+  left: 16px;
+  .type--oral,
+  .type--audio{
+    display: inline-block;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+  .type--oral {
+    width: 24px;
+    height: 39px;
+    background-image: url(images/icons/hist-oral.png);
+    &:hover {
+      background-position: 0px -39px;
+      cursor: pointer;
+    }
+  }
+  .type--audio {
+    width: 24px;
+    height: 39px;
+    left: 30px;
+    background-image: url(images/icons/hist-audio.png);
+    &:hover {
+      background-position: 0px -39px;
+      cursor: pointer;
+    }
+  }
+
+}
+.type--oral-popup {
+    padding: 2em 1em;
+    background-color: #fff;
+    max-width: 960px;
+}
+.type--audio-popup {
+  width: 100%;
+}

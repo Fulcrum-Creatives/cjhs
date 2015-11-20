@@ -1,0 +1,17 @@
+/*---------------------------------------------------------
+ * Videos
+---------------------------------------------------------*/
+.thumb__digital-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/icons/youtube-play-static.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 100;
+  transition: background-image 0.4s ease-out;
+  &:hover {
+    transition: background-image 0.4s ease-out;
+    background-image: url(images/icons/youtube-play.png);
+  }
+}

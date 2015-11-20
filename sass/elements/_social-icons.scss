@@ -1,0 +1,40 @@
+/*---------------------------------------------------------
+ * Social Icons
+---------------------------------------------------------*/
+.site__social-links {
+  margin: 0.5em auto 0;
+  overflow: hidden;
+  width: 107px;
+  @include media-query(380px) {
+      margin: 0.5em 0 0;
+  } 
+  a {
+    width: 100%;
+    height: 100%;
+    display:block;
+  }
+}
+.social-links__icon {
+  margin-right:10px;
+  float:left;
+  width:29px;
+  height:28px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  &:hover {
+    background-position: 0px -30px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.social-links__facebook {
+  background-image: url(images/social/social-facebook.png);
+}
+.social-links__linkedin {
+  background-image: url(images/social/social-linked-in.png);
+}
+.social-links__youtube {
+  background-image: url(images/social/social-youtube.png);
+}

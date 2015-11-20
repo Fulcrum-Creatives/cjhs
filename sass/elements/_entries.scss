@@ -1,0 +1,233 @@
+/*---------------------------------------------------------
+ * Entries
+---------------------------------------------------------*/
+.pull-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+.article__entries {
+  padding: 2em 0;
+}
+.article__entries--border {
+  border-top: 1px solid $light-grey;
+  overflow: hidden;
+  &.entries__links {
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+.article__entries--aside {
+  img {
+    border: 1px solid $light-grey;
+    padding: 10px;
+  }
+  &.aside__videos {
+    width: 300px;
+    height: 225px;
+  }
+}
+.article__entries--content {
+  &.content__lrg-aside {
+    padding-left: 0;
+    @include media-query(960px) {
+      padding-left: 1.5em;
+    }
+    @include media-query(1110px) {
+      padding-left: 0;
+    }
+    @include media-query(1220px) {
+      padding-left: 1.5em;
+    }
+  }
+  &.content__sml-aside {
+    padding-left: 1.5em;
+  }
+  .entry__link-banner {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    margin-bottom: 1.5em;
+    a {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.article__entries--more {
+  background-color: $med-grey;
+  display: inline-block;
+  text-shadow: 0px 1px 1px $dark-grey;
+  @include font-size(14);
+  transition: background-color 0.4s ease;
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $dark-grey;
+  }
+  a {
+    color: #fff;
+    padding: 0.5em;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: auto;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+.entry__search-results {
+  padding-top: 1.5em;
+}
+#post-199{
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+}
+
+img[class*="wp-image-"], 
+.gallery .gallery-icon img {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.article__aside--list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.article__aside--image,
+.entry__image {
+  position: relative;
+  border: 1px solid $light-grey;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+.entries__oral_histories {
+  .entry__image {
+    max-width: 300px;
+  }
+}
+.wp-caption {
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 1em;
+  @include media-query(585px) {
+    margin-bottom: 0;
+  }
+  img {
+    border-color: $light-grey;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    max-width: 98%;
+    height: auto;
+  }
+  .wp-caption-text, 
+  .gallery-caption {
+    color: #666;
+    @include font-size(12);
+  }
+  .wp-caption-text {
+    margin-bottom: 0.6em;
+    padding: 10px 0 5px 0px;
+    position: relative;
+    /* &:before {
+      color: #666;
+      content: '\2014';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: bold;
+      margin-right: 5px;
+      position: absolute;
+      left: 10px;
+      top: 7px;
+    } */
+  }
+}
+.gallery-item {
+  max-width: none;
+  margin: 0;
+  float: left;
+  width: 100% !important;
+  @include media-query(400px) {
+    max-width: 46%;
+    margin: 0 2%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .wp-caption-text.gallery-caption {
+    color: #666;
+    @include font-size(12);
+    margin-bottom: 0.6em;
+    position: relative;
+    background: #eee;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 1em;
+    width: 100%;
+    @include media-query(585px) {
+      margin-bottom: 0;
+    }
+    /* &:before {
+      color: #666;
+      content: '\2014';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: bold;
+      margin-right: 5px;
+      position: absolute;
+      left: 10px;
+      top: 7px;
+    } */
+  }
+}
+.gallery-caption {
+  max-width: 20%;
+  margin: 0 2%;
+  width: 100% !important;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .wp-caption-text {
+    margin-bottom: 0.6em;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    &:before {
+      content: '';
+    }
+  }
+}
+.histories__more {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+  &:last-child {
+    margin-right: 0;
+  }
+}

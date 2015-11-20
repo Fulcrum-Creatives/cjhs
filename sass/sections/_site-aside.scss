@@ -1,0 +1,64 @@
+/*---------------------------------------------------------
+ * Site Aside
+---------------------------------------------------------*/
+.body__site-aside--full {
+  display: none;
+  @include media-query(860px) {
+    display: block;
+  }
+}
+.body__site-aside--mobile {
+  display: block;
+  @include media-query(860px) {
+    display: none;
+  }
+}
+.body__site-aside--full,
+.body__site-aside--mobile {
+  width: 250px;
+  height: auto;
+  float: none;
+  margin: 0 auto 3em;
+  overflow: hidden;
+  @include media-query(380px) {
+      width: 313px;
+      height: 106px;
+  }
+  @include media-query(860px) {
+    float: right;
+      margin: 0;
+  }
+}
+.site-aside--right,
+.site-aside--left {
+    float: none;
+    @include media-query(380px) {
+        float: left;
+    }
+}
+.site-aside--right {
+  width: 103px;
+  height: 106px;
+  margin: 0 auto 2em auto;
+  @include media-query(380px) {
+    height: 100%;
+    width: auto;
+    margin: 0 1em 0 0;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.site-aside--left {
+  width: 191px;
+  margin: 0 auto;
+  @include media-query(380px) {
+      width: auto;
+      margin: 0;
+  }
+}

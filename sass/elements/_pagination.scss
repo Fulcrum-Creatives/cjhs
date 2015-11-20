@@ -1,0 +1,41 @@
+/*---------------------------------------------------------
+ * Pagnination
+---------------------------------------------------------*/
+.pagination {
+  margin: 2.5em 0;
+  .page-numbers {
+    padding: 3px 5px;
+    margin: 0 2px;
+    background-color: $light-grey;
+    color: #333;
+    text-decoration: none;
+    @include font-size(18);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    &:hover {
+      transition: background-color 0.4s ease, color 0.4s ease;
+      background-color: $grey;
+      color: #fff;
+      padding: 4px 6px;
+      margin: 0 1px;
+    }
+    &.current {
+      background-color: $grey;
+      text-shadow: none;
+      color: #fff;
+      &:hover {
+        padding: 3px 5px;
+        margin: 0 2px;
+      }
+    }
+    &.dots {
+      color: #333;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+        color: #333;
+        padding: 4px 6px;
+        margin: 0 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/*---------------------------------------------------------
+ * Table of Contents
+---------------------------------------------------------*/
+.toc {
+  padding: 0.25em 0 0.5em;
+  margin: 1em 0;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  .toc__heading {
+    color: #333;
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: decimal;
+    li {
+      margin-bottom: 0.25em;
+    }
+  }
+}

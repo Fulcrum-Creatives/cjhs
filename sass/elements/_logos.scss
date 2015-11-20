@@ -1,0 +1,45 @@
+/*---------------------------------------------------------
+ * Logos
+---------------------------------------------------------*/
+.header__logo {
+  float: none;
+  margin: 0 auto;
+  width: 388px;
+  max-width: 100%;
+  height: 44px;
+  top: 33px;
+  position: relative;
+  @include media-query(860px) {
+    float: left;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.site__sponsored-logo {
+    width: 107px;
+    height: 100%;
+    margin: 0;
+}
+.header__logo,
+.site__sponsored-logo, {
+  .site__logo {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@import "menu-icon";

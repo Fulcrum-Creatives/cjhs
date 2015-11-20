@@ -1,0 +1,23 @@
+/*---------------------------------------------------------
+ * Sponsorship
+---------------------------------------------------------*/
+.sponsors {
+  list-style-type: none;
+  padding: 0;
+  li {
+    position: relative;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    min-height: 45px;
+    &.sub {
+      border-top: none;
+    }
+    span {
+      position: absolute;
+      left: 180px;
+      top: auto;
+      font-style: italic;
+    }
+  }
+}

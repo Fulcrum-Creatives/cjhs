@@ -1,0 +1,13 @@
+/*---------------------------------------------------------
+ * Header
+---------------------------------------------------------*/
+.body__header {
+  background-color: $grey;
+  height: 138px;
+  position: relative;
+  .body__content {
+    overflow: hidden;
+    padding: 1em 2em;
+    height: 138px;
+  }
+}

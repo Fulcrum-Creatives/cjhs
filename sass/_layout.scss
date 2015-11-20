@@ -1,0 +1,241 @@
+/*---------------------------------------------------------
+ * Layout
+---------------------------------------------------------*/
+.body__content {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2em;
+}
+.fp__content {
+    position: relative;
+}
+main.body__content{
+    overflow: hidden;
+}
+.content__main {
+  width: 100%;
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+  min-height: none;
+  @include media-query(850px) {
+    padding-right: 280px;
+    min-height: 889px;
+  }
+  @include media-query(1120px) {
+    padding-left: 280px;
+  }
+}
+
+.body__content--full {
+  .content__main {
+    position: relative;
+    @include media-query(850px) {
+      padding-right: 0;
+    }
+  }
+  .entry__header {
+    max-width: 540px;
+    @include media-query(850px) {
+      max-width: none;
+    }
+  }
+  .article__entries--content {
+    overflow: hidden;
+    @include media-query(720px) {
+      margin-right: 280px;
+      float: left;
+    }
+  }
+  .article__entries--aside {
+    margin-top: 1.5em;
+    li {
+      width: 172px;
+      height: 172px;
+    }
+    @include media-query(720px) {
+      float: right;
+      margin-left: -280px;
+      margin-top: -2.5em;
+    }
+  }
+}
+
+.body__content--left-sidebar {
+  .content__main {
+    max-width: 100%;
+    padding-right: 0px;
+    width: 776px;
+    margin: 0 auto;
+    @include media-query(1120px) {
+      width: 1056px;
+      margin: 0;
+    }
+  }
+}
+
+.article__entries {
+  position: relative;
+}
+.content__row-half {
+  overflow: hidden;
+  position: relative;
+  .article__entries {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    @include media-query(1300px) {
+      width: 48%;
+      float: left;
+      margin-right: 2%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.article__entries--content {
+  &.content__lrg-aside{
+    margin-left: 0;
+    min-height: none;
+    @include media-query(960px) {
+      margin-left: 300px;
+      min-height: 230px;
+    }
+    @include media-query(1110px) {
+      margin-left: 0;
+      min-height: none;
+    }
+    @include media-query(1220px) {
+      margin-left: 300px;
+      min-height: 230px;
+    }
+  }
+  &.content__sml-aside {
+    margin-left: 0;
+    min-height: none;
+    margin-top: 1.5em;
+    @include media-query(480px) {
+      margin-left: 150px;
+      min-height: 145px;
+      margin-top: 0;
+    }
+  }
+}
+
+.article__entries--aside {
+  position: relative;
+  &.aside__large{
+    width: 300px;
+    height: 225px;
+    margin: 0 auto 1.5em;
+    left: auto;
+    top: auto;
+    @include media-query(960px) {
+      position: absolute;
+      margin: 0;
+      left: 0px;
+      top: 2em;
+    }
+    @include media-query(1110px) {
+      position: relative;
+      margin: 0 auto 1.5em;
+      left: auto;
+      top: auto;
+    }
+    @include media-query(1220px) {
+      position: absolute;
+      margin: 0;
+      left: 0px;
+      top: 2em;
+    }
+  }
+  &.aside__small {
+    width: 147px;
+    height: 147px;
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+    @include media-query(480px) {
+      position: absolute;
+      margin: 0;
+      left: 0px;
+      top: 2em;
+    }
+  }
+}
+
+
+.body__aside {
+  width: 284px;
+  clear: both;
+}
+.body__aside--left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  @include media-query(1120px) {
+    display: block;
+  }
+}
+.body__aside--right {
+  position: relative;
+  right: auto;
+  top: auto;
+  margin: 0 auto;
+  display: block;
+  @include media-query(850px) {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 0;
+  }
+}
+
+.body__content--oral-hist {
+  .pull-left,
+  .pull-right {
+    width: 280px;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    @include media-query(615px) {
+      float: left;
+      width: 50%;
+      padding: 0 1em 0 0;
+      margin: 0;
+    }
+  }
+}
+
+.sponsor__level--list {
+  .sub-list {
+    float: none;
+    width: 100%;
+    @include media-query(615px) {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+.content__entries {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  &.entries__videos {
+    @include media-query(960px) {
+      height: 273px;
+    }
+    @include media-query(1110px) {
+      height: auto;
+    }
+    @include media-query(1220px) {
+      height: 273px;
+    }
+  }
+}

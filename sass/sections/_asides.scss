@@ -1,0 +1,45 @@
+/*---------------------------------------------------------
+ * Asides
+---------------------------------------------------------*/
+.body__aside {
+  padding: 2.75em 2em 3em;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2em;
+  }
+}
+.body__aside--left {
+  .widget-area__infobox {
+    background-color: #dbdbdc;
+    background-image: url(images/backgrounds/fold.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-top: 27px;
+    color: #4D4D4F;
+    li {
+      padding: 0 1em;
+      position: relative;
+      &:last-child {
+        padding-bottom: 1em;
+      }
+    }
+    .infobox-item--heading {
+      @include font-size(16);
+      transition: color 0.4s ease;
+    }
+    a {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+    }
+    .header-hover {
+      transition: color 0.4s ease;
+      color: #00a69c;
+    }
+  }
+}

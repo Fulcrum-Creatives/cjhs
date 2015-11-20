@@ -1,0 +1,63 @@
+/*---------------------------------------------------------
+ * Base
+---------------------------------------------------------*/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body {
+	@include font-size($font-size__base);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.content__main {
+    line-height: 1.5em;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+article {
+    color: $grey;
+    a {
+        color: #07a59b;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.error__image {
+    max-width: 630px;
+    height: auto;
+    border: 1px solid $light-grey;
+    margin: 1.5em auto;
+    padding: 10px;
+}
+.cjhs_show {
+    display: block;
+}
+.cjhs_hide {
+    display: none;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: $light-grey;
+}
+.no-margin {
+    margin: 0;
+}
+.inline {
+    margin-right: 1em;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.clearfix {
+    @include clearfix();
+    clear: both;
+}

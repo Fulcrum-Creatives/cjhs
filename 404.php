@@ -1,22 +1,27 @@
 <?php get_header(); ?>
-	<div id="primary" class="primary">
-		<div id="content" role="main">
-			<article id="post-0" class="post error404 not-found">
-				<header class="entry-header">
-					<h1 class="entry-title">Page Not Found</h1>
-				</header>
-				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. The Columbus Jewish Historical Society recently moved to a new website, and some off-site links may be out of date. Try searching for the page you are looking for below.', 'twentyeleven' ); ?></p>
-					<?php get_search_form(); ?>
-					<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
-					<?php
-					/* translators: %1$s: smilie */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'twentyeleven' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', array('count' => 0 , 'dropdown' => 1 ), array( 'after_title' => '</h2>'.$archive_content ) );
-					?>
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?> -->
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
-		</div><!-- #content -->
-	</div><!-- .primary -->
+<main id="main" class="body__content main" role="main">
+    <div class="content__main hentry content__error">
+      <?php  $search = new WP_Advanced_Search('adv_search_form'); ?>
+      <div style="margin: 1.5em 0; text-align: center"><?php echo cjhs_page_title( 'Not what you were looking for?' ); ?></div>
+      <?php
+      $topy_query = new WP_Query(array(
+        'post_type'      => 'topy_photos',
+        'posts_per_page' => '1',
+        'orderby'        => 'rand',
+        'no_found_rows'  => true
+      ));
+      while ($topy_query->have_posts()) : $topy_query->the_post();
+        $cjhs_topy_photo = ( get_field( 'topy_photo' ) ? get_field( 'topy_photo' ) : '' );
+      ?>
+        <a href="<?php echo $cjhs_topy_photo['url']; ?>" class="fancybox" title="<? the_title(); ?>">
+          <img src="<?php echo $cjhs_topy_photo['url']; ?>" alt="<?php echo $cjhs_topy_photo['alt']; ?>" class="error__image"/>
+        </a>
+      <?php endwhile; wp_reset_postdata(); ?>
+      
+      <p style="text-align: center; margin: 1.5em 0;"><?php _e('Check that your URL is correct or try the advaced search below.', FCWP_TEXTDOMAIN ); ?></p>
+      <div class="content__adv-search">
+        <?php $search->the_form(); ?>
+      </div>
+    </div>
+</main>
 <?php get_footer(); ?>

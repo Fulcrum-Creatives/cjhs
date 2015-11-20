@@ -1,0 +1,101 @@
+/*---------------------------------------------------------
+ * Buttons
+---------------------------------------------------------*/
+.button__one{
+  background-color: $med-grey;
+  display: inline-block;
+  text-shadow: 0px 1px 1px $dark-grey;
+  color: #fff;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font-size(14);
+  transition: background-color 0.4s ease;
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $dark-grey;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  &.search-submit {
+    display: inline-block;
+    margin-top: 1.5em;
+  }
+  &:active,
+  &:focus,
+  &.sele {
+    color: #333;
+    background-color: lighten( $med-grey, 25% );
+    text-shadow: none;
+  }
+  &:visited {
+    color: #fff;
+  }
+}
+
+.button__two {
+  background-color: $med-grey;
+  display: inline-block;
+  text-shadow: 0px 1px 1px $dark-grey;
+  color: #fff;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font-size(14);
+  transition: background-color 0.4s ease;
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $dark-grey;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &.search-submit {
+    display: inline-block;
+    margin-top: 1.5em;
+  }
+  &:active,
+  &:focus,
+  &.sele {
+    color: #333;
+    background-color: lighten( $med-grey, 25% );
+    text-shadow: none;
+  }
+}
+
+.button__three {
+  background-color: $med-grey;
+  display: inline-block;
+  text-shadow: 0px 1px 1px $dark-grey;
+  color: #fff;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font-size(14);
+  transition: background-color 0.4s ease;
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $dark-grey;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  &.search-submit {
+    display: inline-block;
+    margin-top: 1.5em;
+  }
+  &:active,
+  &:focus,
+  &.sele {
+    color: #333;
+    background-color: lighten( $med-grey, 25% );
+    text-shadow: none;
+  }
+  &:visited {
+    color: #fff;
+  }
+}
+.button__four {
+  @extend .button__three;
+  margin-right: 5px;
+}

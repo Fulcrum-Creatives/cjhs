@@ -1,0 +1,30 @@
+/*---------------------------------------------------------
+ * Wall of Donors
+---------------------------------------------------------*/
+.sponsor__level {
+  padding: 1.5em 0;
+  border-top: 1px solid $light-grey;
+  overflow: hidden;
+  .sponsor__level--header-amount {
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+  }
+  .sponsor__level--header-type {
+    color: #666;
+    font-weight: 200;
+    margin-top: 0.25em;
+  }
+}
+.sponsor__level--list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: $grey;
+  .sub-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.5em;
+  }
+}

@@ -1,0 +1,27 @@
+// Colors
+//================================================================================
+// text colors
+$color__font: #333;
+$color__header: #333;
+// link colors
+$color__link: #333;
+$color__link-hover: lighten( #333, 25% );
+$color__link-visited: darken( #333, 15% );
+// color pallete
+$grey: #4D4D4F;
+$dark-grey: #454548;
+$med-grey: #8C8C8C;
+$light-grey: #b6b5b3;
+
+// Typography
+//================================================================================
+$font-size__base: 16;
+// The default font family.
+$font-family__base: sans-serif !default;
+// The font sizes for h1-h6.
+$font-size__h1: 2    * $font-size__base !default;
+$font-size__h2: 1.5  * $font-size__base !default;
+$font-size__h3: 1.17 * $font-size__base !default;
+$font-size__h4: 1    * $font-size__base !default;
+$font-size__h5: 0.83 * $font-size__base !default;
+$font-size__h6: 0.67 * $font-size__base !default;

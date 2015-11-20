@@ -1,0 +1,20 @@
+/*---------------------------------------------------------
+ * Audio
+---------------------------------------------------------*/
+.mejs-container .mejs-controls {
+    background: $grey;
+}
+.mejs-controls div.mejs-time-rail {
+  width: 306px;
+}
+.mejs-controls .mejs-time-rail span, .mejs-controls .mejs-time-rail a {
+  width: 295px;
+}
+.entries__oral_histories {
+  .audio__title {
+    margin-bottom: 0.15em;
+  }
+  .mejs-container {
+    margin-bottom: 1.5em;
+  }
+}
