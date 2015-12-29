@@ -243,10 +243,10 @@ function cjhs_content_images( $img_size ){
   	    $caption = $first_row_image['caption'];
   	    $size    = $img_size;
   	    $thumb   = $first_row_image['sizes'][ $size ];
-  	    $ricg    = tevkori_get_srcset_string( $first_row_image['ID'], $img_size );
+  	    $ricg    = wp_get_attachment_image_srcset( $first_row_image['ID'], $img_size );
   	    $html .= '<li>
   	            <a href="'. $url .'" title="'. $caption .'" class="fancybox-img">
-  	              <img src="'. $thumb .'" ' . $ricg . ' alt="'. $alt .'" />
+  	              <img src="'. $thumb .'" srcset="' . $ricg . '" alt="'. $alt .'" />
   	            </a>
   	          </li>';
   		$html .= '</ul>';

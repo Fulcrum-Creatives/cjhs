@@ -15,8 +15,8 @@
         $cjhs_full_image_caption = ( get_field( 'full_image_caption' ) ? get_field( 'full_image_caption' ) : '' );
         if( get_field('background_image') ):
           ?>
-          <a href="<?php echo $cjhs_full_image['url']; ?>" <?php echo tevkori_get_srcset_string( $cjhs_full_image['ID'], 'larger' ); ?> class="fancybox" title="<?php echo $cjhs_full_image_caption; ?>">
-          <img src="<?php echo $cjhs_background_image['url']; ?>" <?php echo tevkori_get_srcset_string( $cjhs_background_image['ID'], 'larger' ); ?> alt="" />
+          <a href="<?php echo $cjhs_full_image['url']; ?>" class="fancybox" title="<?php echo $cjhs_full_image_caption; ?>">
+            <img src="<?php echo $cjhs_background_image['url'];?>" srcset="<?php echo wp_get_attachment_image_srcset( $cjhs_background_image['ID'], 'larger' ); ?>" alt="" />
           </a>
           <?php 
         endif; 

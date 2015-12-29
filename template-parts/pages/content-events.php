@@ -2,18 +2,23 @@
 $current = array(
              'key'     => 'date_start',
              'value'   => date('Ymd'),
-             'compare' => '>',
+             'compare' => '>=',
           );
 $past = array(
              'key'     => 'date',
              'value'   => date('Ymd'),
-             'compare' => '<',
+             'compare' => '<=',
           );
 $between = array(
+             'key'     => 'date',
+             'value'   => date('Ymd'),
+             'compare' => '>=',
+          ); 
+$between2 = array(
              'key'     => 'date_start',
              'value'   => date('Ymd'),
-             'compare' => '<',
-          ); 
+             'compare' => '<=',
+          );
 $order = 'ASC';
 $meta_query = '';
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -27,7 +32,7 @@ if( is_page( array( 'upcoming', 'exhibits-programs' ) ) ) :
   $meta_query = array( $current );
   $args = array_merge( $args, array( 'order' => 'ASC', 'meta_query' => $meta_query ) );
 elseif( is_page('current-exhibits') ) :
-  $meta_query = array( $current, $between );
+  $meta_query = array( $between, $between2 );
   $args = array_merge( $args, array( 'order' => 'ASC', 'meta_query' => $meta_query ) );
 elseif( is_page('past') ) :
   $meta_query = array( $past );

@@ -13,9 +13,9 @@ if( is_page() ) :
             $title   = $cjhs_tout_image['title'];
             $size  = 'aside-sm';
             $thumb = $cjhs_tout_image['sizes'][ $size ];
-            $ricg  = tevkori_get_srcset_string( $cjhs_tout_image['ID'], 'aside' );
+            $ricg  = wp_get_attachment_image_srcset( $cjhs_tout_image['ID'], 'aside' );
           endif;
-          $cjhs_item_image         = ( $cjhs_tout_image ? '<img src="' . $thumb . '"' . $ricg . ' alt="' . $alt . '" />' : '' );
+          $cjhs_item_image         = ( $cjhs_tout_image ? '<img src="' . $thumb . '" srcset="' . $ricg . '" alt="' . $alt . '" />' : '' );
           // Text
           $cjhs_bold_weight_text   = ( get_field( 'bold_weight_text' ) ? get_field( 'bold_weight_text' ) : '' );
           $cjhs_normal_weight_text = ( get_field( 'normal_weight_text' ) ? get_field( 'normal_weight_text' ) : '' );

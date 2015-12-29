@@ -9,10 +9,10 @@ if( have_rows('cjhs_content_images') ):
       $caption = $cjhs_content_image['caption'];
       $size    = 'aside';
       $thumb   = $cjhs_content_image['sizes'][ $size ];
-      $ricg    = tevkori_get_srcset_string( $cjhs_content_image['ID'], 'aside' );
+      $ricg    = wp_get_attachment_image_srcset( $cjhs_content_image['ID'], 'aside' );
       echo '<li>
               <a href="'. $url .'" title="'. $caption .'" class="fancybox-img">
-                <img src="'. $thumb .'" ' . $ricg . ' alt="'. $alt .'" />
+                <img src="'. $thumb .'" srcset="' . $ricg . '" alt="'. $alt .'" />
               </a>
             </li>';
     endif;
