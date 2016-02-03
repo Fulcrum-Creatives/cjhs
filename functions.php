@@ -22,14 +22,9 @@ if( !function_exists( 'fcwp_theme_support' ) ) :
 	    // Post Thumbnails
 	    add_theme_support( 'post-thumbnails' );
 	    // Custom Image Sizes
-	    add_image_size( 'monitor@2', 2800, 9999 );
-	    add_image_size( 'tablet@2', 2048, 9999 );
 	    add_image_size( 'monitor', 1400, 9999 );
 	    add_image_size( 'tablet', 1024, 9999 );
-	    add_image_size( 'mobile@2', 960, 9999 );
 	    add_image_size( 'mobile', 480, 9999 );
-	    add_image_size( 'aside@2', 348, 348, array( 'center', 'top') );
-	    add_image_size( 'aside-sm@2', 294, 294, array( 'center', 'top') );
 	    add_image_size( 'aside', 174, 174, array( 'center', 'top') );
 	    add_image_size( 'aside-sm', 147, 147, array( 'center', 'top') );
 	    // Register Nav Menus*/
