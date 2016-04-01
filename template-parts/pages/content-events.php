@@ -47,6 +47,7 @@ if( $events_query->have_posts() ) :
     $events_query->the_post(); 
     $cjhs_display_date = ( get_field( 'display_date' ) ? get_field( 'display_date' ) : '' );
     $cjhs_location = ( get_field( 'location' ) ? get_field( 'location' ) : '' );
+    $cjhs_time = ( get_field( 'time' ) ? get_field( 'time' ) : '' );
 ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('article__entries article__entries--border entries__events'); ?> aria-labelledby="section-heading-<?php the_ID(); ?>" role="article">
       <header class="entry__header" role="heading">
@@ -59,6 +60,9 @@ if( $events_query->have_posts() ) :
         <?php endif; ?>
         <?php if( $cjhs_location ) : ?>
           <p><span class="button__four">Location</span><strong><?php echo $cjhs_location; ?></strong></p>
+        <?php endif; ?>
+        <?php if( $cjhs_location ) : ?>
+          <p><span class="button__four">Time</span><strong><?php echo $cjhs_time; ?></strong></p>
         <?php endif; ?>
       </section>
       <aside class="article__entries--aside" role="img">

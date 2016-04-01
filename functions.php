@@ -184,7 +184,7 @@ endif;
  * Excerpt Length
 ---------------------------------------------------------*/
 function cjhs_excerpt_length( $length ) {
-	return 12;
+	return 11;
 }
 add_filter( 'excerpt_length', 'cjhs_excerpt_length' );
 /*---------------------------------------------------------
